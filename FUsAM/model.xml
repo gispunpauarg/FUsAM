@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<alt abstract="true" mandatory="true" name="Usabilidad">
+				<or mandatory="true" name="Tareas">
+					<or mandatory="true" name="Metricas">
+						<feature mandatory="true" name="Tiempo"/>
+						<feature mandatory="true" name="Error"/>
+						<feature mandatory="true" name="Bateria"/>
+						<feature mandatory="true" name="Memoria"/>
+						<feature mandatory="true" name="Brillo"/>
+					</or>
+					<or mandatory="true" name="Contexto">
+						<feature mandatory="true" name="Luminosidad"/>
+						<feature mandatory="true" name="Conectividad"/>
+						<feature mandatory="true" name="Temperatura"/>
+						<feature mandatory="true" name="Movimiento"/>
+						<feature mandatory="true" name="Presion">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="Humedad"/>
+						<feature mandatory="true" name="Ruido"/>
+					</or>
+					<and mandatory="true" name="Satisfaccion">
+						<feature mandatory="true" name="Cuestionario"/>
+					</and>
+				</or>
+				<feature mandatory="true" name="MetodosApp"/>
+			</alt>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

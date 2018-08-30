@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- En este archivo xml se definen todas las tareas (metodos) que van a ser monitoreadas en las pruebas de usabilidad.
+	 
+  nombre: un nombre de fantasia que se le quiere dar a la tarea, sin espacios en blanco.
+    tipo: si es una tarea que inicia una accion se define como TI (tarea inicial), sino TF (tarea final).	
+pointcut: es el metodo perteneciente a la aplicacion a probar. Este metodo debe estar completamente definido, 
+          es decir, debe contener los paquetes a los que pertenece. 
+    menu: en el caso de que el metodo tenga como parametro un objecto MenuItem, en este tag corresponde definir el
+          titulo del MenuItem. Si no fuera el caso, no definirlo.
+	       
+Ejemplo: -->
+
+<!-- NOTEPAD ############################################################################################## -->
+
+<tareas>
+	<tarea nombre="EditarNota" tipo="TI">
+    	<pointcut>com.example.android.notepad.NotesList.onListItemClick</pointcut>    	    	
+    </tarea>
+    <tarea nombre="AgregarNota" tipo="TI">
+    	<pointcut>com.example.android.notepad.NotesList.onOptionsItemSelected</pointcut>
+    	<menu>Add note</menu>   		
+    </tarea>
+    <tarea nombre="GrabarNota" tipo="TF">
+    	<pointcut>com.example.android.notepad.NoteEditor.onOptionsItemSelected</pointcut>
+    	<menu>Save</menu>    	
+    </tarea>
+    <tarea nombre="DescartarCambios" tipo="TF">
+    	<pointcut>com.example.android.notepad.NoteEditor.cancelNote</pointcut>    	    	
+    </tarea>
+    <tarea nombre="BorrarNota" tipo="TF">
+    	<pointcut>com.example.android.notepad.NoteEditor.deleteNote</pointcut>    	    	
+    </tarea>
+    <tarea nombre="EditarTituloNota" tipo="TI">
+    	<pointcut>com.example.android.notepad.NoteEditor.onOptionsItemSelected</pointcut>
+    	<menu>Edit title</menu>    	    	
+    </tarea>
+    <tarea nombre="GuardarTituloNota" tipo="TF">
+    	<pointcut>com.example.android.notepad.TitleEditor.onClick</pointcut>    	    	
+    </tarea>        
+</tareas>
+
+
+<!-- NOTE ############################################################################################ 
+
+<tareas>
+    <tarea nombre="AgregarNota" tipo="TI">
+    	<pointcut>com.example.note.NoteList.createNote</pointcut>    	   		
+    </tarea>
+	<tarea nombre="EditarNota" tipo="TI">
+    	<pointcut>com.example.note.NoteList.onListItemClick</pointcut>    	    	
+    </tarea>
+    <tarea nombre="GuardarNota" tipo="TF">
+    	<pointcut>com.example.note.NoteEdit.onOptionsItemSelected</pointcut>
+    	<menu>Save</menu>    	
+    </tarea>
+	<tarea nombre="EliminarNota" tipo="TF">
+    	<pointcut>com.example.note.NoteEdit.onOptionsItemSelected</pointcut>
+    	<menu>Delete</menu>    	    	
+    </tarea>
+</tareas>
+
+-->
